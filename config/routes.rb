@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'post/new'
+
+  get 'post/create'
+
+  get 'post/edit'
+
+  get 'post/destroy'
+
   get 'welcome/index'
   root 'welcome#index'
 
