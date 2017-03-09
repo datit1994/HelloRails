@@ -1,19 +1,22 @@
 <h1>Show Page</h1>
-<table>
-  <tr>
-    <thead>Name</thead>
-    <thead>Age</thead>
-    <thead>Country</thead>
+<table style="border: 1px solid black">
+  <tr >
+    <td>Name</td>
+    <td>Age</td>
+    <td>Country</td>
   </tr>
-  <tr>
-    <td>
-      <%- @myObj.name %>
-    </td>
-    <td>
-      <%- @myObj.age %>
-    </td>
-    <td>
-      <%- @myObj.country %>
-    </td>
-  </tr>
+  <% @arrObj.each_index do |i| %>
+    <tr>
+      <td>
+        <%= @arrObj[i]["name"] %>
+      </td>
+      <td>
+        <%= @arrObj[i]["age"] %>
+      </td>
+      <td>
+        <%= @arrObj[i]["country"] %>
+      </td>
+    </tr>
+  <% end %>
+
 </table>
